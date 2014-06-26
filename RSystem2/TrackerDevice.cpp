@@ -26,3 +26,8 @@ void TrackerDevice::shutdown(){
 	delete(this->mUserTracker);
 	Log::i( TAG, "shutdown...");
 }
+
+void
+TrackerDevice::setData(nite::UserData& userdata){
+	this->mDevice->setTrackerData(userdata);
+}

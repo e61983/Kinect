@@ -16,7 +16,8 @@ private:
 public:
 	TrackerDevice(BaseDevice*);
 	~TrackerDevice();
-	void init();
-	void shutdown();
+	void	setData(nite::UserData&);
+	void	init();
+	void	shutdown();
 };
 #endif
