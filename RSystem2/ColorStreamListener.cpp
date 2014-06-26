@@ -1,14 +1,14 @@
 #include "ColorStreamListener.h"
-ColorStreamListener::ColorStreamListener(){
+ColorStreamListener::ColorStreamListener( ColorDevice* device ){
 	Log::i( TAG, "Create...");
 	this->colorMat = 0;
+	this->mColorDevice = device;
 }/* End of Constructor */
 
 ColorStreamListener::~ColorStreamListener(){
 	Log::i( TAG, "Destory...");
-	if ( 0 != this->colorMat ){
-		delete(this->colorMat);
-	}/* End of if */
+	this->colorMat = 0;
+	this->mColorDevice = 0;
 }/* End of Destructor */
 
 void ColorStreamListener::onNewFrame(openni::VideoStream& steam){
