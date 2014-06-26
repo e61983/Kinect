@@ -2,6 +2,12 @@
 using namespace std;
 BaseDevice::BaseDevice(void) : openni::Device() {
 	Log::i( TAG, "Create...");
+	mColorDevice = 0;
+	mDepthDevice = 0;
+	mTrackerDevice = 0;
+	ColorMat = 0;
+	DepthMat = 0;
+	userdata = 0;
 	this->init();
 }
 

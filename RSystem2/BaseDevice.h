@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <OpenNI.h>
+#include <opencv2\highgui\highgui.hpp>
 #include <NiTE.h>
 #include "Log.h"
 #include "ColorDevice.h"
@@ -26,6 +27,9 @@ private:
 	ColorDevice		*mColorDevice;
 	DepthDevice		*mDepthDevice;
 	TrackerDevice	*mTrackerDevice;
+	cv::Mat			*ColorMat;
+	cv::Mat			*DepthMat;
+	nite::UserData	*userdata;
 public:
 					BaseDevice(void);
 					~BaseDevice(void);
