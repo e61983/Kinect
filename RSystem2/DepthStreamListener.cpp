@@ -8,9 +8,7 @@ DepthStreamListener::DepthStreamListener(DepthDevice* device){
 
 DepthStreamListener::~DepthStreamListener(){
 	Log::i( TAG, "Destory...");
-	if ( 0 != this->depthMat ){
-		delete(this->depthMat);
-	}/* End of if */
+	this->depthMat = 0;
 }/* End of Destructor */
 
 void DepthStreamListener::onNewFrame(openni::VideoStream& steam){
