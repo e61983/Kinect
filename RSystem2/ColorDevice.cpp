@@ -15,7 +15,7 @@
 	Log::i( TAG, "init...");
 	this->mColorStream = new openni::VideoStream();
 	
-	this->mColorStream->create(*(this->mDevice),openni::SENSOR_COLOR);
+	this->mColorStream->create(*((openni::Device*)(this->mDevice)),openni::SENSOR_COLOR);
 	openni::VideoMode mColorMode;
 	mColorMode.setResolution(640,480);
 	mColorMode.setPixelFormat(openni::PIXEL_FORMAT_RGB888);
