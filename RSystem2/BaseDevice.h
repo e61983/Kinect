@@ -29,7 +29,7 @@ private:
 	TrackerDevice	*mTrackerDevice;
 	cv::Mat			*ColorMat;
 	cv::Mat			*DepthMat;
-	nite::UserData	*userdata;
+	nite::UserData	*Userdata;
 public:
 					BaseDevice(void);
 					~BaseDevice(void);

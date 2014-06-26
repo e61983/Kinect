@@ -7,7 +7,7 @@ BaseDevice::BaseDevice(void) : openni::Device() {
 	mTrackerDevice = 0;
 	ColorMat = 0;
 	DepthMat = 0;
-	userdata = 0;
+	Userdata = 0;
 	this->init();
 }
 
