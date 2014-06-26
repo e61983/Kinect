@@ -8,6 +8,7 @@ TrackerListener::TrackerListener( TrackerDevice *device ){
 
 TrackerListener::~TrackerListener(){
 	Log::i( TAG, "Destory...");
+	mDevice = 0;
 }/* End of Destructor */
 
 void TrackerListener::onNewFrame(nite::UserTracker& userTracker){
