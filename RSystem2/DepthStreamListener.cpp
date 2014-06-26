@@ -1,8 +1,9 @@
 #include "DepthStreamListener.h"
 
-DepthStreamListener::DepthStreamListener(){
+DepthStreamListener::DepthStreamListener(DepthDevice* device){
 	Log::i( TAG, "Create...");
 	this->depthMat = 0;
+	this->mDepthDevice = device;
 }/* End of Constructor */
 
 DepthStreamListener::~DepthStreamListener(){
