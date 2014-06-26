@@ -1,8 +1,9 @@
 #include "TrackerListener.h"
 #include <iostream>
 
-TrackerListener::TrackerListener(){
+TrackerListener::TrackerListener( TrackerDevice *device ){
 	Log::i( TAG, "Create...");
+	mDevice = device;
 }/* End of Constructor */
 
 TrackerListener::~TrackerListener(){

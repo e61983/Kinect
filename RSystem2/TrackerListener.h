@@ -3,14 +3,17 @@
 #include <NiTE.h>
 #include <opencv2\highgui\highgui.hpp>
 #include "Log.h"
+#include "TrackerDevice.h"
 
 #define TAG	"TrackerListener"
-
+class	TrackerDevice;
+class	nite::UserTrackerFrameRef;
 class TrackerListener : virtual public nite::UserTracker::NewFrameListener {
 private:
-	 nite::UserTrackerFrameRef userTrackerFrameRef;
+	TrackerDevice				*mDevice;
+	nite::UserTrackerFrameRef	userTrackerFrameRef;
 public:
-	TrackerListener();
+	TrackerListener(TrackerDevice*);
 	~TrackerListener();
 	void onNewFrame(nite::UserTracker& userTracker);
 }; 
