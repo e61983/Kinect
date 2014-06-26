@@ -17,6 +17,7 @@ private:
 public:
 	DepthDevice(BaseDevice*);
 	~DepthDevice();
+	void setData( cv::Mat& );
 	void init();
 	void shutdown();
 };

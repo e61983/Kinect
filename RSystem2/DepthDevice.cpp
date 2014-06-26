@@ -36,3 +36,8 @@ void DepthDevice::shutdown(){
 	delete(this->mDepthStream);
 	Log::i( TAG, "shutdown...");
 }
+
+void 
+DepthDevice::setData( cv::Mat& mat){
+	this->mDevice->setDepthData(mat);
+}
