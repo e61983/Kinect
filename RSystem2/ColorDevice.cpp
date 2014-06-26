@@ -1,5 +1,5 @@
 #include "ColorDevice.h"
-	ColorDevice::ColorDevice(openni::Device* device){
+	ColorDevice::ColorDevice(BaseDevice* device){
 		Log::i( TAG, "Create...");
 		this->mDevice = device; 
 		this->init();
