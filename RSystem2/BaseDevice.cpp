@@ -82,3 +82,14 @@ BaseDevice::shutdownNI(){
 	openni::OpenNI::shutdown();
 	Log::i( TAG, "shutdownNI...");
 }
+
+void			
+BaseDevice::setColorData( cv::Mat &mat ){
+	//this->ColorMat = new cv::Mat(mat);
+	this->ColorMat = &mat;
+}
+
+cv::Mat*			
+BaseDevice::getColorData( void ){
+	return this->ColorMat;
+}

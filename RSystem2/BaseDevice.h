@@ -33,6 +33,8 @@ private:
 public:
 					BaseDevice(void);
 					~BaseDevice(void);
+	void			setColorData( cv::Mat & );
+	cv::Mat*		getColorData(void);
 	bool			init();
 	void			shutdown();
 };
