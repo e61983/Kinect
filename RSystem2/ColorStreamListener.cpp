@@ -19,6 +19,7 @@ void ColorStreamListener::onNewFrame(openni::VideoStream& steam){
 				//cv::Mat mColorMat_BGR;
 				this->colorMat = new cv::Mat(Frame.getHeight(),Frame.getWidth(),CV_8UC3,(void*)Frame.getData());
 				//cv::cvtColor(mColorMat,mColorMat_BGR,CV_RGB2BGR);
+				this->mColorDevice->setData(*(this->colorMat));
 			}/* End of if */
 		}/* End of if */
 }/* End of onNewFrame */
