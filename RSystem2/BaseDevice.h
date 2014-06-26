@@ -3,7 +3,7 @@
 
 #include <iostream>
 #include <OpenNI.h>
-#include <opencv2\highgui\highgui.hpp>
+#include <opencv2\imgproc\imgproc.hpp>
 #include <NiTE.h>
 #include "Log.h"
 #include "ColorDevice.h"
@@ -37,6 +37,8 @@ public:
 	cv::Mat*		getColorData(void);
 	void			setDepthData( cv::Mat & );
 	cv::Mat*		getDepthData(void);
+	void			setTrackerData( nite::UserData & );
+	nite::UserData*	getTrackerData(void);
 	bool			init();
 	void			shutdown();
 };
