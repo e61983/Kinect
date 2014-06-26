@@ -1,6 +1,6 @@
 #include "DepthDevice.h"
 
-DepthDevice::DepthDevice(openni::Device* device){
+DepthDevice::DepthDevice(BaseDevice* device){
 	Log::i( TAG, "Create...");
 	this->mDevice = device;
 	this->init();

@@ -6,14 +6,16 @@
 #include "DepthStreamListener.h"
 
 #define TAG "DepthDevice"
-
+class BaseDevice;
+class openni::VideoStream;
+class DepthStreamListener;
 class DepthDevice{
 private:
-	openni::Device		*mDevice;
+	BaseDevice			*mDevice;
 	openni::VideoStream	*mDepthStream;
 	DepthStreamListener	*mDepthStreamListener;
 public:
-	DepthDevice(openni::Device*);
+	DepthDevice(BaseDevice*);
 	~DepthDevice();
 	void init();
 	void shutdown();
