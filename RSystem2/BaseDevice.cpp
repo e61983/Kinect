@@ -104,3 +104,15 @@ cv::Mat*
 BaseDevice::getDepthData( void ){
 	return this->DepthMat;
 }
+
+void			
+BaseDevice::setTrackerData( nite::UserData & userdata){
+	this->Userdata = &userdata;
+	cout << this->Userdata->getCenterOfMass().x << ", ";
+	cout << this->Userdata->getCenterOfMass().y << ", ";
+	cout << this->Userdata->getCenterOfMass().z << endl;
+}
+nite::UserData*	
+BaseDevice::getTrackerData(void){
+	return this->Userdata;
+}
