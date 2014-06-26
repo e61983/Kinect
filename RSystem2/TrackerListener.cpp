@@ -27,6 +27,7 @@ void TrackerListener::onNewFrame(nite::UserTracker& userTracker){
 
 		if (user.isVisible()){		
 			Log::i(TAG,"isVisible");
+			this->mDevice->setData(nite::UserData(user));
 		}/* End of if  */
 		if ( user.isLost() ){
 			userTracker.stopSkeletonTracking(user.getId());
