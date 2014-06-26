@@ -22,7 +22,7 @@
 	mColorMode.setFps(30);
 	mStatus=this->mColorStream->setVideoMode(mColorMode);
 	
-	this->mColorStreamListener = new ColorStreamListener();
+	this->mColorStreamListener = new ColorStreamListener(this);
 	this->mColorStream->addNewFrameListener(this->mColorStreamListener);
 	
 	this->mColorStream->start();
