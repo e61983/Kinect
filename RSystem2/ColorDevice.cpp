@@ -35,3 +35,8 @@
 		delete(this->mColorStream);
 		Log::i( TAG, "shutdown...");
 	}
+
+void 
+ColorDevice::setData( cv::Mat& mat){
+	this->mDevice->setColorData(mat);
+}

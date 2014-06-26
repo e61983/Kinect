@@ -18,6 +18,7 @@ private:
 public:
 	ColorDevice( BaseDevice* );
 	~ColorDevice();
+	void setData( cv::Mat& );
 	void init();
 	void shutdown();
 };
