@@ -5,14 +5,16 @@
 #include "TrackerListener.h"
 
 #define TAG	"TrackerDevice"
-
+class	BaseDevice;
+class	nite::UserTracker;
+class	TrackerListener;
 class TrackerDevice{
 private:
-	openni::Device		*mDevice;
+	BaseDevice			*mDevice;
 	nite::UserTracker	*mUserTracker;		
 	TrackerListener		*mTrackerListener;
 public:
-	TrackerDevice(openni::Device*);
+	TrackerDevice(BaseDevice*);
 	~TrackerDevice();
 	void init();
 	void shutdown();

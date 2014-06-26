@@ -1,5 +1,5 @@
 #include "TrackerDevice.h"
-TrackerDevice::TrackerDevice(openni::Device* device){
+TrackerDevice::TrackerDevice(BaseDevice* device){
 		Log::i( TAG, "Create...");
 		this->mDevice = device;
 		this->init();
