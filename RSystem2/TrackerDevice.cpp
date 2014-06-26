@@ -15,7 +15,7 @@ void TrackerDevice::init(){
 	this->mUserTracker = new nite::UserTracker();
 	this->mUserTracker->create(this->mDevice);
 	this->mUserTracker->setSkeletonSmoothingFactor(0.7f);
-	this->mTrackerListener = new TrackerListener();
+	this->mTrackerListener = new TrackerListener(this);
 	this->mUserTracker->addNewFrameListener(this->mTrackerListener);
 }
 
