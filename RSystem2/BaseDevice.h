@@ -35,6 +35,8 @@ public:
 					~BaseDevice(void);
 	void			setColorData( cv::Mat & );
 	cv::Mat*		getColorData(void);
+	void			setDepthData( cv::Mat & );
+	cv::Mat*		getDepthData(void);
 	bool			init();
 	void			shutdown();
 };

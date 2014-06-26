@@ -93,3 +93,14 @@ cv::Mat*
 BaseDevice::getColorData( void ){
 	return this->ColorMat;
 }
+
+void			
+BaseDevice::setDepthData( cv::Mat &mat ){
+	//this->ColorMat = new cv::Mat(mat);
+	this->DepthMat = &mat;
+}
+
+cv::Mat*			
+BaseDevice::getDepthData( void ){
+	return this->DepthMat;
+}
