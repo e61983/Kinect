@@ -23,7 +23,7 @@ void DepthDevice::init(){
 	mDepthMode.setFps(30);
 	mStatus=mDepthStream->setVideoMode(mDepthMode);
 	
-	this->mDepthStreamListener = new DepthStreamListener();
+	this->mDepthStreamListener = new DepthStreamListener(this);
 	this->mDepthStream->addNewFrameListener(this->mDepthStreamListener);
 	
 	this->mDepthStream->start();
