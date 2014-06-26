@@ -17,6 +17,7 @@ void DepthStreamListener::onNewFrame(openni::VideoStream& steam){
 		if (Frame.isValid()){
 			if ( openni::SENSOR_DEPTH == Frame.getSensorType()){
 				this->depthMat = new cv::Mat(Frame.getHeight(),Frame.getWidth(),CV_16UC1,(void*)Frame.getData());
+				this->mDepthDevice->setData(*(this->depthMat));
 			}/* End of if */
 		}/* End of if */
 }/* End of onNewFrame */
